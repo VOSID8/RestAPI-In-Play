@@ -1,0 +1,150 @@
+body {
+  background: #231010;
+  color: white;
+}
+
+.fullwidth-map {
+  padding: 40px 0;
+}
+
+.map-wrapper-row {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 60px;
+}
+.map-wrapper-row .section-header {
+  color: #FFF1C6;
+  text-align: center;
+}
+.map-wrapper-row .header-title {
+  font-size: 36px;
+}
+.map-wrapper-row .header-subtitle {
+  font-size: 22px;
+}
+
+.map-pins-component {
+  margin-top: 60px;
+  position: relative;
+}
+.map-pins-component .map-image {
+  max-width: 100%;
+  opacity: 0.3;
+}
+.map-pins-component .pin {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  z-index: 10;
+  transition: 0.5s;
+  transform: scale(1) translateY(0);
+  cursor: pointer;
+  perspective: 300px;
+  transform: rotateX(25deg);
+  transform-origin: 50% 100%;
+}
+.map-pins-component .pin:hover, .map-pins-component .pin.is-opened {
+  transition: 0.5s;
+  transform: scale(1.3) translateY(0);
+  z-index: 30;
+}
+.map-pins-component .pin:hover .pin-label span, .map-pins-component .pin.is-opened .pin-label span {
+  background: #FFF1C6;
+  color: black;
+  transition: 0.5s;
+}
+.map-pins-component .pin:active {
+  transform: rotateX(25deg) scale(1.1);
+  transition: 0.2s;
+}
+.map-pins-component .pin-icon {
+  width: 40px;
+}
+.map-pins-component .pin-label {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.map-pins-component .pin-label span {
+  transition: 0.2s;
+  background: #000;
+  padding: 5px 8px;
+  display: inline-block;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.map-pins-component .pin-location-usa {
+  left: 10%;
+  top: 13%;
+}
+.map-pins-component .pin-location-uk {
+  left: 42%;
+  top: 3%;
+}
+.map-pins-component .pin-location-india {
+  left: 67%;
+  top: 26%;
+}
+.map-pins-component .pin-location-aus {
+  left: 85%;
+  top: 63%;
+}
+.map-pins-component .pin-popup {
+  background: black;
+  border-radius: 5px;
+  position: absolute;
+  left: calc(100% + 20px);
+  transition: 0.5s;
+  top: 0;
+  width: 250px;
+  text-align: left;
+  font-size: 16px;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  opacity: 0.4;
+  max-height: 100px;
+  overflow: scroll-y;
+}
+.map-pins-component .pin-popup:before {
+  height: 100%;
+  width: 50px;
+  left: -50px;
+  background: transparent;
+  top: 0;
+  position: absolute;
+  content: "";
+  display: block;
+}
+.map-pins-component .pin-popup-header {
+  padding: 20px 20px;
+  border-bottom: 3px solid #333;
+}
+.map-pins-component .pin-popup-header h3 {
+  font-size: 18px;
+  margin: 0;
+}
+.map-pins-component .pin-popup ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.map-pins-component .pin-popup li {
+  display: block;
+  border-bottom: 1px solid #333;
+}
+.map-pins-component .pin-popup a {
+  color: #FFF1C6;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+}
+.map-pins-component .pin-popup a:hover {
+  color: white;
+}
+.map-pins-component .pin.is-opened .pin-popup {
+  transform: scaleY(1);
+  transition: 0.5s;
+  opacity: 1;
+}

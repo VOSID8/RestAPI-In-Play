@@ -1,5 +1,89 @@
-@()
+@(username: String)(implicit request: MessagesRequestHeader, flash: Flash)
 
-@main("Welcome to Play") {
-  <h1>Welcome to Play!</h1>
-}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FreeMedia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/map.css")'>
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<section class="fullwidth-map">
+	<div class="map-wrapper-row">
+		<header class="section-header">
+			<h2 class="header-title"> Hello @username !</h2>
+			<p class="header-subtitle">Welcome to Free Media. Pick Region of interest</p>
+		</header>
+
+
+		<form method="post" action="@routes.base.freemedia">
+		<div class="map-pins-component">
+			<div class="map-pin pin pin-location-usa">
+
+				<div class="pin-label"><span>USA</span></div>
+				<img class="pin-icon" src="http://svgshare.com/i/3G4.svg">
+				
+				<div class="pin-popup"></div>
+				<input type="hidden" name="username" value="@username">
+				<input type="hidden" name="country" value="USA">
+				<input type="submit" value="Go">
+			</div>
+		</form>	
+
+			
+		<form method="post" action="@routes.base.freemedia">
+			<div class="map-pins-component">
+				<div class="map-pin pin pin-location-uk">
+	
+					<div class="pin-label"><span>UK</span></div>
+					<img class="pin-icon" src="http://svgshare.com/i/3G4.svg">
+					
+					<div class="pin-popup"></div>
+					<input type="hidden" name="username" value="@username">
+					<input type="hidden" name="country" value="UK">
+					<input type="submit" value="Go">
+				</div>
+			</form>	
+			
+			<form method="post" action="@routes.base.freemedia">
+				<div class="map-pins-component">
+					<div class="map-pin pin pin-location-india">
+		
+						<div class="pin-label"><span>India</span></div>
+						<img class="pin-icon" src="http://svgshare.com/i/3G4.svg">
+						
+						<div class="pin-popup"></div>
+						<input type="hidden" name="username" value="@username">
+						<input type="hidden" name="country" value="India">
+						<input type="submit" value="Go">
+					</div>
+				</form>	
+			
+									  
+				<form method="post" action="@routes.base.freemedia">
+					<div class="map-pins-component">
+						<div class="map-pin pin pin-location-aus">
+			
+							<div class="pin-label"><span>Australia</span></div>
+							<img class="pin-icon" src="http://svgshare.com/i/3G4.svg">
+							
+							<div class="pin-popup"></div>
+							<input type="hidden" name="username" value="@username">
+							<input type="hidden" name="country" value="Australia">
+							<input type="submit" value="Go">
+						</div>
+					</form>	
+			
+			<img class="map-image" src="http://svgshare.com/i/3GQ.svg" alt="">
+		</div>
+	</div>
+</section>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='@routes.Assets.versioned("javascripts/map.js")'></script>
+
+</body>
+</html>

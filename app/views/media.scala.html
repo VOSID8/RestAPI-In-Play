@@ -1,0 +1,58 @@
+@(country: String,username: String)(implicit request: RequestHeader, flash: Flash)
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/chat.css")'>
+</head>
+<body>
+    <div class="main-header">@country Chat and Free Media</div>
+    <br>
+    <input type="button" class="load" onclick='load("@country")' value="Load Live TVs">
+
+<div hidden id="uk" class="layout">
+    <a href="https://www.youtube.com/watch?v=9Auq9mYxFEE">Sky News</a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=5SOmL-522CA">GBNews</a>
+    <br>
+    <a href="https://www.itv.com/hub/itv">ITV</a>
+    <br>
+</div>
+<div hidden id="usa" class="layout">
+    <a href="https://www.youtube.com/watch?v=w_Ma8oQLmSM">ABC News</a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=dp8PhLsUcFE">Bloomberg</a>
+    <br>
+    <a href="https://go.cnn.com/?stream=cnni">CNN News</a>
+    <br>
+</div>
+
+<div hidden id="india" class="layout">
+    <a href="https://www.youtube.com/watch?v=Cy_6-_XUW-c">Aajtk</a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=SgbEWzOPzUM">NDTV News</a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=Xmm3Kr5P1Uw">IndiaTV</a>
+    <br>
+</div>
+    
+<div hidden id="aus" class="layout">
+    <a href="https://www.youtube.com/watch?v=vOTiJkg1voo">ABC Australia</a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=w_Ma8oQLmSM">ABC News</a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=w_Ma8oQLmSM">ABC News</a>
+    <br>
+</div>
+    <div class="chat">
+    <input type="hidden" id="ws-route" value="@routes.base.socket.absoluteURL()"/>
+    <input type="hidden" id="user" value="@username"/>
+    <input type="text" id="chat-input" size="80" placeholder="Type your message here" />
+    <br>
+    <textarea id="chat-area" rows="40" cols="80"></textarea>
+</div>
+    <script src='@routes.Assets.versioned("javascripts/chat.js")'></script>
+</body>
+</html>
+
+
