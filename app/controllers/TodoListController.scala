@@ -40,6 +40,17 @@ class TodoListController @Inject()(val controllerComponents: ControllerComponent
   }
 }
 
+def markAsDone(itemId: Long) = Action {
+    val foundItem = todoList.find(_.id == itemId)
+    foundItem match {
+      case Some(item) =>
+        val newItem = item.copy(isItDone = true)
+        todoList.dropWhileInPlace(_.id == itemId)
+        todoList += newItem
+        Accepted(Json.toJson(newItem))
+      case None => NotFound
+    }
+  }
 
   def deleteAllDone() = Action {
     todoList.filterInPlace(_.isItDone == false)
