@@ -1,35 +1,7 @@
 
+GET     /randomNumber               controllers.TodoListController.randomNumber
+GET     /todo                       controllers.TodoListController.getAll
+GET    /todo/:itemId                controllers.TodoListController.getById(itemId: Long)
+PUT     /todo/done/:itemId    controllers.TodoListController.markAsDone(itemId: Long)
+DELETE  /todo/done            controllers.TodoListController.deleteAllDone
 
-+nocsrf
-POST    /login                      controllers.base.validateLoginPost
-+nocsrf
-POST    /createUser1                controllers.base.createUser
-
-
-GET     /chatSocket                 controllers.base.socket
-
-+nocsrf
-POST     /freemedia                       controllers.base.freemedia
-
-GET     /world                      controllers.base.world
-
-GET     /freemedia                          controllers.base.freemedia
-# +nocsrf
-# POST    /addTask1                   controllers.TaskList1.addTask
-# +nocsrf
-# POST    /deleteTask1                controllers.TaskList1.deleteTask
-# +nocsrf
-# POST	/createUserForm1				controllers.TaskList1.createUserForm
-
-# GET     /validateGet1               controllers.TaskList1.validateLoginGet(username,password)
-
-GET     /login                      controllers.base.login
-GET     /logout1                    controllers.base.logout
-GET     /random                     controllers.HomeController.randomNumber
-
-#+nocsrf
-#POST     /world          controllers.base.world
-#GET      /world          controllers.base.world
-
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
