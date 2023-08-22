@@ -785,3 +785,39 @@ SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
 2023.04.01 16:59:21 INFO  time: code lens generation in 7.35s
 2023.04.01 17:02:06 INFO  Shutting down server
 2023.04.01 17:02:06 INFO  shutting down Metals
+2023.08.21 22:01:37 INFO  Started: Metals version 1.0.0 in folders 'C:\Projects\Rest-Play\Rest-API' for client Visual Studio Code 1.81.1.
+Aug 21, 2023 10:01:37 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.20.1 by Redgate
+Aug 21, 2023 10:01:37 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+Aug 21, 2023 10:01:37 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+Aug 21, 2023 10:01:41 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:C:\Projects\Rest-Play\Rest-API\.metals\metals (H2 2.1)
+Aug 21, 2023 10:01:41 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.060s)
+Aug 21, 2023 10:01:41 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+Aug 21, 2023 10:01:41 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.08.21 22:01:42 INFO  time: initialize in 4.76s
+2023.08.21 22:01:44 WARN  Build server is not auto-connectable.
+2023.08.21 22:01:45 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:01:51 INFO  no build target found for C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala. Using presentation compiler with project's scala-library version: 3.3.0
+2023.08.21 22:01:54 INFO  time: code lens generation in 8.19s
+2023.08.21 22:04:16 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:06:26 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:08:22 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:11:53 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:11:55 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:12:01 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:12:16 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:12:37 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:13:09 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:13:12 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:13:13 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:22:25 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.21 22:22:29 WARN  no build target for: C:\Projects\Rest-Play\Rest-API\app\controllers\TodoListController.scala
+2023.08.22 01:58:55 INFO  Shutting down server
+2023.08.22 01:58:55 INFO  shutting down Metals
+2023.08.22 01:58:55 INFO  Exiting server
